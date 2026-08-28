@@ -409,6 +409,16 @@ function Logo() {
 function Header({ onCatalog, theme, onThemeToggle }) {
   const [open, setOpen] = useState(false);
   const close = () => setOpen(false);
+
+  useEffect(() => {
+    if (!open) return undefined;
+    const closeOnEscape = (event) => {
+      if (event.key === "Escape") setOpen(false);
+    };
+    window.addEventListener("keydown", closeOnEscape);
+    return () => window.removeEventListener("keydown", closeOnEscape);
+  }, [open]);
+
   return (
     <>
       <div className="strip">
@@ -429,15 +439,21 @@ function Header({ onCatalog, theme, onThemeToggle }) {
       <header className="site-header">
         <div className="shell header-inner">
           <Logo />
-          <nav className={`site-nav ${open ? "open" : ""}`} aria-label="Primary">
+          <nav id="primary-navigation" className={`site-nav ${open ? "open" : ""}`} aria-label="Primary">
             <a href="#catalog" onClick={close}>Skills</a>
             <a href="#how" onClick={close}>How it works</a>
             <a href="#faq" onClick={close}>FAQ</a>
             <a href="#sponsor" onClick={close}>Sponsor</a>
             <a href={supportUrl} target="_blank" rel="noreferrer" onClick={close}>Support</a>
+            <a className="nav-mobile-only" href={githubProfile} target="_blank" rel="noreferrer" onClick={close}>
+              GitHub <ArrowUpRight size={15} />
+            </a>
+            <a className="nav-mobile-only" href={xProfile} target="_blank" rel="noreferrer" onClick={close}>
+              Follow on X <ArrowUpRight size={15} />
+            </a>
           </nav>
           <div className="header-actions">
-            <a className="icon-button" href={githubProfile} target="_blank" rel="noreferrer" aria-label="Kappaemme on GitHub">
+            <a className="icon-button header-social" href={githubProfile} target="_blank" rel="noreferrer" aria-label="Kappaemme on GitHub">
               <GhIcon />
             </a>
             <button
@@ -448,7 +464,7 @@ function Header({ onCatalog, theme, onThemeToggle }) {
             >
               {theme === "dark" ? <Sun size={17} /> : <Moon size={17} />}
             </button>
-            <a className="icon-button" href={xProfile} target="_blank" rel="noreferrer" aria-label="Kappaemme on X">
+            <a className="icon-button header-social" href={xProfile} target="_blank" rel="noreferrer" aria-label="Kappaemme on X">
               <XIcon />
             </a>
             <a className="button button-ghost sm support-button" href={supportUrl} target="_blank" rel="noreferrer">
@@ -459,7 +475,8 @@ function Header({ onCatalog, theme, onThemeToggle }) {
               className="icon-button menu-button"
               onClick={() => setOpen(!open)}
               aria-expanded={open}
-              aria-label="Toggle navigation"
+              aria-controls="primary-navigation"
+              aria-label={open ? "Close navigation" : "Open navigation"}
             >
               {open ? <X size={18} /> : <Menu size={18} />}
             </button>
