@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <style>
+    .slash { fill: #050505; }
+    @media (prefers-color-scheme: dark) {
+      .slash { fill: #ffffff; }
+    }
+  </style>
+  <path class="slash" d="M39.5 5H52L24.5 59H12z" />
+</svg>
