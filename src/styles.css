@@ -1,3 +1,27 @@
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/inter-latin.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DM Mono";
+  src: url("/fonts/dm-mono-400-latin.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DM Mono";
+  src: url("/fonts/dm-mono-500-latin.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
 /* ============================================================
    Slashcmd — design tokens
    Dark-first, hairline-ruled, no glow.
@@ -19,9 +43,9 @@
 
   /* type */
   --text:        #f2f1ef;
-  --text-2:      #a3a19d;
-  --text-3:      #6b6a67;
-  --text-4:      #4a4947;
+  --text-2:      #b2afa9;
+  --text-3:      #94918b;
+  --text-4:      #878580;
   --on-solid:    #11110f;
   --solid-hover: #ffffff;
   --flag-bg:     rgba(13, 13, 12, .86);
@@ -71,8 +95,8 @@
 
   --text:        #171715;
   --text-2:      #5e5b55;
-  --text-3:      #7c7870;
-  --text-4:      #a09b91;
+  --text-3:      #68645d;
+  --text-4:      #6d6962;
   --on-solid:    #f8f7f3;
   --solid-hover: #000000;
   --row-hover:   rgba(20, 19, 17, .024);
