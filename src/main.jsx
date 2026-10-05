@@ -807,7 +807,7 @@ function Proof() {
               <span className="x-review-quote">
                 <span className="x-review-quote-head">
                   <img src={kappaAvatarUrl} alt="Kappaemme avatar" width="24" height="24" loading="lazy" />
-                  <span><b>Kappaemme <small className="x-verified">✓</small></b><em>@Kappaemme1926</em></span>
+                  <span><b>Kappaemme <small className="x-verified">✓</small></b><em>@Kappaemmedev</em></span>
                 </span>
                 <strong>{post.sharedPost}</strong>
                 <small>{post.skill}</small>

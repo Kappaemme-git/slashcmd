@@ -19,4 +19,4 @@ npm run build
 
 The production site is deployed on Vercel at [slashcmd.dev](https://slashcmd.dev).
 
-Created by [Kappaemme](https://x.com/Kappaemme1926).
+Created by [Kappaemme](https://x.com/Kappaemmedev).

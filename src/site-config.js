@@ -1,6 +1,6 @@
 export const creator = {
   name: "Kappaemme",
-  xUrl: "https://x.com/Kappaemme1926",
+  xUrl: "https://x.com/Kappaemmedev",
   githubUrl: "https://github.com/Kappaemme-git",
   githubSponsorsUrl: "https://github.com/sponsors/Kappaemme-git",
   supportUrl: "https://buy.stripe.com/bJedR96H14WF5xmezS57W03",

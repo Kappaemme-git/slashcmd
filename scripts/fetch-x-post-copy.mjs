@@ -56,7 +56,7 @@ function decodePost(html) {
 
 if (import.meta.url === pathToFileURL(process.argv[1]).href) {
   for (const [slug, id] of Object.entries(posts)) {
-    const statusUrl = `https://x.com/Kappaemme1926/status/${id}`;
+    const statusUrl = `https://x.com/Kappaemmedev/status/${id}`;
     const endpoint = `https://publish.twitter.com/oembed?omit_script=1&url=${encodeURIComponent(statusUrl)}`;
     const response = await fetch(endpoint);
     console.log(`\n## ${slug}`);

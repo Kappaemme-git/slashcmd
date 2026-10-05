@@ -37,7 +37,7 @@ function relevantText(ocrOutput) {
 
 try {
   for (const [slug, id] of Object.entries(posts)) {
-    const page = await fetch(`https://x.com/Kappaemme1926/status/${id}`).then((response) => response.text());
+    const page = await fetch(`https://x.com/Kappaemmedev/status/${id}`).then((response) => response.text());
     const videoUrl = findVideoUrl(page);
     console.log(`\n## ${slug}`);
     if (!videoUrl) {
